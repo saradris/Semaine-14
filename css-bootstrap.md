@@ -7,23 +7,35 @@
   - [Méthode complète (fichiers compilés)](#méthode-complète-fichiers-compilés)
     - [Fichier sources](#fichier-sources)
   - [Package manager](#package-manager)
-  - [Starter Template](#starter-template)
+- [Starter Template](#starter-template)
 - [Utilisation](#utilisation)
   - [Container](#container)
     - [Fluid container](#fluid-container)
     - [Responsive container](#responsive-container)
   - [Grid](#grid)
+    - [Largeur égale](#largeur-égale)
+    - [Alignement](#alignement)
+      - [Vertical](#vertical)
+      - [Horizontal](#horizontal)
+    - [More](#more)
   - [Components](#components)
+    - [](#)
+  - [Themes](#themes)
+  - [Snippets](#snippets)
 
 ## Introduction
 
 Bootstrap est un framework permettant d'aider à la création de site web responsive et mobile first.
 
+Il comprend un large éventail de classes CSS déjà toute faites, lorsqu'on apprend à les utiliser on peut très rapidement construire une page web.
+
+un des gros intérêt de Bootstrap c'est la possibilité de définir le comportement de nos éléments via différentes classes. On peut par exemple définir aussi bien la couleur, la couleur de fond et l'alignement d'un texte avec 3 classes à appliqués à une seule `div`. 
+
 ## Installation
 
 ### Méthode rapide (CDN)
 
-Copiez-collez le lien vers le CSS dans votre balise \<head>.
+Copiez-collez le lien vers le CSS dans votre balise `<head>`.
 
 ```html
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
@@ -57,7 +69,7 @@ Il est également possible de retrouver les fichiers pré-compilation si vous vo
 
 Si vous travaillez avec un package manager (npm), il est tout à fait possible d'installer Bootstrap. [Référez-vous à la documentation :book:](https://getbootstrap.com/docs/4.5/getting-started/download/#package-managers) pour la commande exacte en fonction de votre projet.
 
-### Starter Template
+## Starter Template
 
 ```html
 <!doctype html>
@@ -88,9 +100,13 @@ Si vous travaillez avec un package manager (npm), il est tout à fait possible d
 
 Vous êtes normalement capable d'utiliser des classes CSS, et bien Bootstrap ce n'est que ça au final. Une grosse bibliothèque de classes pensées pour le responsive et la conception facile de template HTML.
 
+Il n'y a pas de solution miracle pour apprendre Bootstrap, il faut l'utiliser, allez lire la documentation et tester un maximum. Je vous propose une petite sélection et quelques explications des classes les plus utiles pour démarrer, après ça sera à vous d'explorer [:book: la documentation!](https://getbootstrap.com/docs/4.5/getting-started/introduction/)
+
 ### Container
 
 Bootstrap propose une classe `container`qui permet d'avoir un contenu flexible facilement. Le container est nécessaires pour pouvoir utiliser leurs système de grid personnalisé (voir point suivant).
+
+Un container de base à un max-width défini pour chaque breakpoint.
 
 ```html
 <div class="container">...</div>
@@ -123,6 +139,10 @@ Bootstrap utilise **Flexbox** pour créer un système de grille personnalisé qu
 
 Le principe est simple, votre page est divisée en 12 colonnes, vous n'avez qu'a utilisé la classe `col-x` pour afficher une ligne de `x` colone.
 
+Pour ce faire vous devez utilisez une `<div>` avec la classe `row` pour déterminer une rangée. Ensuite à l'intérieur de cette rangée, vous pouvez placer les colonnes que vous voulez. :exclamation: Le total de vos colonnes par rangé ne peut pas être supérieur à 12!
+
+  [:book: Plus d'info dans la documentation](https://getbootstrap.com/docs/4.5/layout/grid/#how-it-works)
+
 ```html
 <div class="container">
   <div class="row">
@@ -138,6 +158,56 @@ Le principe est simple, votre page est divisée en 12 colonnes, vous n'avez qu'a
 </div>
 ```
 
+#### Largeur égale
+
+Si vous n'indiquez pas de valeur après la classe `col` celle-ci seront immédiatement responsive et Bootstrap leurs appliqueras une largeur égale.
+
+```html
+<div class="container">
+  <div class="row">
+    <div class="col">
+    <div class="col">
+    <div class="col">
+  </div>
+</div>
+```
+
+> Ceci ferra bien 3 colonnes de largeur égale.
+
+#### Alignement
+
+Vous vous souvenez des propriétés `justify-content` et `align-items` de Flexbox? Et bien c'est utilisable ici aussi, suffit d'ajouter une des classes suivantes à votre rangée ou colone.
+
+[:book: Plus d'info dans la documentation](https://getbootstrap.com/docs/4.5/layout/grid/#alignment)
+
+##### Vertical
+
+```html
+  <div class="row align-items-start">
+  <div class="row align-items-center">
+  <div class="row align-items-end">
+```
+
+##### Horizontal
+
+```html
+  <div class="row justify-content-start">
+  <div class="row justify-content-center">
+  <div class="row justify-content-end">
+  <div class="row justify-content-around">
+  <div class="row justify-content-between">
+```
+
+#### More
+
+Il y a encore pas mal d'options pour utiliser les grids de Bootstrap, mais il suffit d'un simple coup d'oeil dans [:book:la documentation](https://getbootstrap.com/docs/4.5/layout/grid/) pour trouver votre bonheur!
 
 ### Components
 
+Un autre avantage de Bootstrap c'est l'immense bibliothèque de composants déjà tout près. En voici certains, mais de nouveau il faudra allez voir par vous même ce dont vous avez besoin.
+
+#### 
+
+### Themes
+
+### Snippets
