@@ -5,3 +5,7 @@
 ### HTML/CSS
 
 - [Bootstrap](css-bootstrap.md) :tada:
+
+### Gestion de projet
+
+Méthode Scrum
