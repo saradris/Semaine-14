@@ -1,6 +1,8 @@
 <!-- omit in toc -->
 # Bootstrap
 
+![bootstrap](bootstrap.png)
+
 - [Introduction](#introduction)
 - [Installation](#installation)
   - [Méthode rapide (CDN)](#méthode-rapide-cdn)
@@ -18,8 +20,12 @@
       - [Vertical](#vertical)
       - [Horizontal](#horizontal)
     - [More](#more)
+  - [Utilities](#utilities)
+    - [Colors](#colors)
+    - [Borders](#borders)
+    - [Spacing](#spacing)
   - [Components](#components)
-    - [](#)
+  - [Icons](#icons)
   - [Themes](#themes)
   - [Snippets](#snippets)
 
@@ -27,9 +33,9 @@
 
 Bootstrap est un framework permettant d'aider à la création de site web responsive et mobile first.
 
-Il comprend un large éventail de classes CSS déjà toute faites, lorsqu'on apprend à les utiliser on peut très rapidement construire une page web.
+Il comprend un large éventail de classes CSS déjà toute faites, lorsqu'on apprend à les utiliser on peut très rapidement construire une page web ou un prototype.
 
-un des gros intérêt de Bootstrap c'est la possibilité de définir le comportement de nos éléments via différentes classes. On peut par exemple définir aussi bien la couleur, la couleur de fond et l'alignement d'un texte avec 3 classes à appliqués à une seule `div`. 
+Un des gros intérêt de Bootstrap c'est la possibilité de définir le comportement de nos éléments via différentes classes. On peut par exemple définir aussi bien la couleur, la couleur de fond et l'alignement d'un texte avec 3 classes à appliqués à une seule `div`.
 
 ## Installation
 
@@ -69,6 +75,8 @@ Il est également possible de retrouver les fichiers pré-compilation si vous vo
 
 Si vous travaillez avec un package manager (npm), il est tout à fait possible d'installer Bootstrap. [Référez-vous à la documentation :book:](https://getbootstrap.com/docs/4.5/getting-started/download/#package-managers) pour la commande exacte en fonction de votre projet.
 
+[:arrow_up:Revenir au top](#bootstrap)
+
 ## Starter Template
 
 ```html
@@ -96,6 +104,9 @@ Si vous travaillez avec un package manager (npm), il est tout à fait possible d
 </html>
 ```
 
+[:arrow_up:Revenir au top](#bootstrap)
+
+
 ## Utilisation
 
 Vous êtes normalement capable d'utiliser des classes CSS, et bien Bootstrap ce n'est que ça au final. Une grosse bibliothèque de classes pensées pour le responsive et la conception facile de template HTML.
@@ -104,7 +115,7 @@ Il n'y a pas de solution miracle pour apprendre Bootstrap, il faut l'utiliser, a
 
 ### Container
 
-Bootstrap propose une classe `container`qui permet d'avoir un contenu flexible facilement. Le container est nécessaires pour pouvoir utiliser leurs système de grid personnalisé (voir point suivant).
+Bootstrap propose une classe `container`qui permet d'avoir un contenant flexible facilement. Le container est nécessaires pour pouvoir utiliser leurs système de grid personnalisé (voir point suivant).
 
 Un container de base à un max-width défini pour chaque breakpoint.
 
@@ -133,11 +144,14 @@ Il existe aussi des classes pour gérer les différents breakpoint de vos contai
 
 [:book: Voir la documentation](https://getbootstrap.com/docs/4.5/layout/overview/#containers)
 
+[:arrow_up:Revenir au top](#bootstrap)
+
+
 ### Grid
 
 Bootstrap utilise **Flexbox** pour créer un système de grille personnalisé qui facilite la mise en page de vos éléments.
 
-Le principe est simple, votre page est divisée en 12 colonnes, vous n'avez qu'a utilisé la classe `col-x` pour afficher une ligne de `x` colone.
+Le principe est simple, votre container est divisée en 12 colonnes, vous n'avez qu'a utilisé la classe `col-x` pour afficher une ligne de `x` colone.
 
 Pour ce faire vous devez utilisez une `<div>` avec la classe `row` pour déterminer une rangée. Ensuite à l'intérieur de cette rangée, vous pouvez placer les colonnes que vous voulez. :exclamation: Le total de vos colonnes par rangé ne peut pas être supérieur à 12!
 
@@ -202,12 +216,197 @@ Vous vous souvenez des propriétés `justify-content` et `align-items` de Flexbo
 
 Il y a encore pas mal d'options pour utiliser les grids de Bootstrap, mais il suffit d'un simple coup d'oeil dans [:book:la documentation](https://getbootstrap.com/docs/4.5/layout/grid/) pour trouver votre bonheur!
 
+[:arrow_up:Revenir au top](#bootstrap)
+
+### Utilities
+
+Les utilities sont des petites classes qui s'ajoutent à vos éléments pour vous aider à les styliser. Il en existe pas mal, on va en voir quelques exemples, mais comme d'habitude, ça sera à vous d'allez dans [:book: la documentation des utilities](https://getbootstrap.com/docs/4.5/utilities/borders/)
+
+```
+Borders
+Clearfix
+Close icon
+Colors
+Display
+Embed
+Flex
+Float
+Image replacement
+Interactions
+Overflow
+Position
+Screen readers
+Shadows
+Sizing
+Spacing
+Stretched link
+Text
+Vertical align
+Visibility
+```
+
+#### Colors
+
+Bootstrap utilise Sass pour gérer son CSS et notamment ses variables et functions de couleurs. Il ensuite très facile d'utiliser ces couleurs une fois qu'on connaît le nom de ces variables. Il existe par exemple deux couleurs: Primary et Secondary. Celle-ci peuvent s'associer à n'importe quelle classe qui peut être mise en couleur. Il y a également une couleur de Success, Danger, Warning et Info.
+
+[Voir les couleurs par défaut](https://getbootstrap.com/docs/4.5/utilities/colors/)
+
+```html
+<p class="text-primary">.text-primary</p>
+<p class="text-secondary">.text-secondary</p>
+<p class="text-success">.text-success</p>
+<p class="text-danger">.text-danger</p>
+<p class="text-warning">.text-warning</p>
+<p class="text-info">.text-info</p>
+<p class="text-light bg-dark">.text-light</p>
+<p class="text-dark">.text-dark</p>
+<p class="text-body">.text-body</p>
+<p class="text-muted">.text-muted</p>
+<p class="text-white bg-dark">.text-white</p>
+<p class="text-black-50">.text-black-50</p>
+<p class="text-white-50 bg-dark">.text-white-50</p>
+```
+
+[:arrow_up:Revenir au top](#bootstrap)
+
+#### Borders
+
+Voici comment ajouter rapidement des bordures à vos éléments.
+
+```html
+<span class="border"></span>
+<span class="border-top"></span>
+<span class="border-right"></span>
+<span class="border-bottom"></span>
+<span class="border-left"></span>
+```
+
+Il est également facile de mettre tout ça en couleur avec les couleurs vues plus haut.
+
+```html
+<span class="border border-primary"></span>
+<span class="border border-secondary"></span>
+<span class="border border-success"></span>
+<span class="border border-danger"></span>
+<span class="border border-warning"></span>
+<span class="border border-info"></span>
+<span class="border border-light"></span>
+<span class="border border-dark"></span>
+<span class="border border-white"></span>
+```
+
+Et on peut encore ajouter un border-radius.
+
+```html
+<img src="..." alt="..." class="rounded">
+<img src="..." alt="..." class="rounded-top">
+<img src="..." alt="..." class="rounded-right">
+<img src="..." alt="..." class="rounded-bottom">
+<img src="..." alt="..." class="rounded-left">
+<img src="..." alt="..." class="rounded-circle">
+<img src="..." alt="..." class="rounded-pill">
+<img src="..." alt="..." class="rounded-0">
+```
+
+[:book: Documentation sur les border](https://getbootstrap.com/docs/4.5/utilities/borders/)
+
+[:arrow_up:Revenir au top](#bootstrap)
+
+#### Spacing
+
+Il est très facile d'ajouter des margins ou des padding à une div. Il suffit d'ajouter une classe en suivant la structure suivante
+
+`{property}{sides}-{size}`
+
+```
+-- Property --
+m - pour une classe de marge
+p - pour une classe de padding
+```
+
+```
+-- Sides --
+t - pour une classe qui définit margin-top ou padding-top
+b - pour une classe qui définit margin-bottom ou padding-bottom
+l - pour une classe qui définit margin-left ou padding-left
+r - pour une classe qui définit margin-right ou padding-right
+x - pour une classe qui définit *-left and *-right
+y - pour une classe qui définit *-top and *-bottom
+blank - pour une classe qui définit un margin ou padding sur les 4 côtés de l'élément.
+```
+
+Pour Size il suffit de mettre un chiffre de 0 à 5.
+
+[:book: Documentation sur le spacing](https://getbootstrap.com/docs/4.5/utilities/spacing/)
+
+[:arrow_up:Revenir au top](#bootstrap)
+
 ### Components
 
-Un autre avantage de Bootstrap c'est l'immense bibliothèque de composants déjà tout près. En voici certains, mais de nouveau il faudra allez voir par vous même ce dont vous avez besoin.
+Un autre avantage de Bootstrap c'est l'immense bibliothèque de composants déjà tout près. En voici certains, mais de nouveau il faudra allez voir par vous même ce dont vous avez besoin car il n'y aucun intérêt à recopier ici du code tout fait.
 
-#### 
+Voici cependant le lien vers [:book: la documentation](https://getbootstrap.com/docs/4.5/components/alerts/)
+
+
+Tous les composants disponibles:
+
+```
+Alerts
+Badge
+Breadcrumb
+Buttons
+Button group
+Card
+Carousel
+Collapse
+Dropdowns
+Forms
+Input group
+Jumbotron
+List group
+Media object
+Modal
+Navs
+Navbar
+Pagination
+Popovers
+Progress
+Scrollspy
+Spinners
+Toasts
+Tooltips
+```
+
+Il vous suffit d'allez jeter un oeil au code et à la documentation pour reproduire les composants qui vous intéressent
+
+[:arrow_up:Revenir au top](#bootstrap)
+
+### Icons
+
+Bootstrap propose depuis peu une bibliothèque d'icônes. Pour les installer exécutez la commande suivante:
+
+```
+npm install bootstrap-icons
+```
+
+Ensuite il suffit de copier le code HTML que vous trouverez sur [la page des icônes](https://icons.getbootstrap.com/#icons)
+
+[:arrow_up:Revenir au top](#bootstrap)
 
 ### Themes
 
+[Bootswatch](https://bootswatch.com/) propose des thèmes gratuits pour Bootstrap, il suffit de les télécharger et d'ensuite remplacer la feuille de style CSS par la nouvelle. Ainsi pas besoin de chipoter aux fichiers d'origine, vous aurez vos nouvelles couleurs et toutes les fonctionnalités de Bootstrap.
+
+Il existe ainsi pléthore de thèmes payants qui propose souvent plus qu'une feuille de style, mais aussi des mises en page spécifique ou des nouveaux components.
+
+[:arrow_up:Revenir au top](#bootstrap)
+
 ### Snippets
+
+Les snippets ou fragments en français, sont des bouts de code que l'on peut retrouver sur internet. Il y a également une multitude de snippet qu'on peut retrouver sur internet pour utiliser Bootstrap et ses compposants de différentes façons.
+
+Il existe des sites qui répertories ces bouts de code, comme par exemple [bootsnip](https://bootsnipp.com/) ou encore [mdbootstrap](https://mdbootstrap.com/snippets/).
+
+:exclamation: Attention toute fois, ces bouts de codes sont souvent "complexe" pour pas grand chose ou qui sont "expirés". Soyez conscient de ce que vous copier/collez dans vos projets et ne le faite pas sans comprendre un minimum. Au mieux inspirez-vous du code trouvé et essayer de le reproduire vous-même.
+
+[:arrow_up:Revenir au top](#bootstrap)
