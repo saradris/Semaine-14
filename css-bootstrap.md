@@ -320,13 +320,13 @@ Il est très facile d'ajouter des margins ou des padding à une div. Il suffit d
 
 `{property}{sides}-{size}`
 
-```
+```text
 -- Property --
 m - pour une classe de marge
 p - pour une classe de padding
 ```
 
-```
+```text
 -- Sides --
 t - pour une classe qui définit margin-top ou padding-top
 b - pour une classe qui définit margin-bottom ou padding-bottom
@@ -345,6 +345,8 @@ Pour Size il suffit de mettre un chiffre de 0 à 5.
 
 #### Sizing
 
+Il est possible d'utiliser les classes Bootstrap pour définir rapidement la taille d'un élément.
+
 ```html
 <div class="w-25">Width 25%</div>
 <div class="w-50">Width 50%</div>
@@ -356,6 +358,8 @@ Pour Size il suffit de mettre un chiffre de 0 à 5.
 [:book: Documentation](https://getbootstrap.com/docs/4.5/utilities/sizing/)
 
 #### Text Alignement
+
+C'est également très facile d'aligner un texte avec la bonne classe.
 
 ```html
 <p class="text-left">Left aligned text on all viewport sizes.</p>
