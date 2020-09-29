@@ -24,6 +24,8 @@
     - [Colors](#colors)
     - [Borders](#borders)
     - [Spacing](#spacing)
+    - [Sizing](#sizing)
+    - [Text Alignement](#text-alignement)
   - [Components](#components)
   - [Icons](#icons)
   - [Themes](#themes)
@@ -340,6 +342,28 @@ Pour Size il suffit de mettre un chiffre de 0 à 5.
 [:book: Documentation sur le spacing](https://getbootstrap.com/docs/4.5/utilities/spacing/)
 
 [:arrow_up:Revenir au top](#bootstrap)
+
+#### Sizing
+
+```html
+<div class="w-25">Width 25%</div>
+<div class="w-50">Width 50%</div>
+<div class="w-75">Width 75%</div>
+<div class="w-100">Width 100%</div>
+<div class="w-auto">Width auto</div>
+```
+
+[:book: Documentation](https://getbootstrap.com/docs/4.5/utilities/sizing/)
+
+#### Text Alignement
+
+```html
+<p class="text-left">Left aligned text on all viewport sizes.</p>
+<p class="text-center">Center aligned text on all viewport sizes.</p>
+<p class="text-right">Right aligned text on all viewport sizes.</p>
+```
+
+[:book: Documentation](https://getbootstrap.com/docs/4.5/utilities/text/)
 
 ### Components
 
