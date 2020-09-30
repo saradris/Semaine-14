@@ -22,6 +22,8 @@
     - [More](#more)
   - [Utilities](#utilities)
     - [Colors](#colors)
+      - [Text color](#text-color)
+      - [Background color](#background-color)
     - [Borders](#borders)
     - [Spacing](#spacing)
     - [Sizing](#sizing)
@@ -253,6 +255,8 @@ Bootstrap utilise Sass pour gérer son CSS et notamment ses variables et functio
 
 [Voir les couleurs par défaut](https://getbootstrap.com/docs/4.5/utilities/colors/)
 
+##### Text color
+
 ```html
 <p class="text-primary">.text-primary</p>
 <p class="text-secondary">.text-secondary</p>
@@ -267,6 +271,21 @@ Bootstrap utilise Sass pour gérer son CSS et notamment ses variables et functio
 <p class="text-white bg-dark">.text-white</p>
 <p class="text-black-50">.text-black-50</p>
 <p class="text-white-50 bg-dark">.text-white-50</p>
+```
+
+##### Background color
+
+```html
+<div class="p-3 mb-2 bg-primary text-white">.bg-primary</div>
+<div class="p-3 mb-2 bg-secondary text-white">.bg-secondary</div>
+<div class="p-3 mb-2 bg-success text-white">.bg-success</div>
+<div class="p-3 mb-2 bg-danger text-white">.bg-danger</div>
+<div class="p-3 mb-2 bg-warning text-dark">.bg-warning</div>
+<div class="p-3 mb-2 bg-info text-white">.bg-info</div>
+<div class="p-3 mb-2 bg-light text-dark">.bg-light</div>
+<div class="p-3 mb-2 bg-dark text-white">.bg-dark</div>
+<div class="p-3 mb-2 bg-white text-dark">.bg-white</div>
+<div class="p-3 mb-2 bg-transparent text-dark">.bg-transparent</div>
 ```
 
 [:arrow_up:Revenir au top](#bootstrap)
@@ -337,7 +356,18 @@ y - pour une classe qui définit *-top and *-bottom
 blank - pour une classe qui définit un margin ou padding sur les 4 côtés de l'élément.
 ```
 
-Pour Size il suffit de mettre un chiffre de 0 à 5.
+```text
+-- Size --
+0 - pour les classes qui éliminent les margin ou padding en utilisant la valeur 0.
+1 - pour une classe qui utilise des margin ou padding à $spacer * .25
+2 - pour une classe qui utilise des margin ou padding à $spacer * .5
+3 - pour une classe qui utilise des margin ou padding à $spacer
+4 - pour une classe qui utilise des margin ou padding à $spacer * 1.5
+5 - pour une classe qui utilise des margin ou padding à $spacer * 3
+auto - pour une classe qui utilise des margin auto
+```
+
+`$spacer` est une variable Sass définie par défaut à `1rem`.
 
 [:book: Documentation sur le spacing](https://getbootstrap.com/docs/4.5/utilities/spacing/)
 
