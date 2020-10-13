@@ -473,6 +473,8 @@ Les snippets ou fragments en français, sont des bouts de code que l'on peut ret
 
 Il existe des sites qui répertories ces bouts de code, comme par exemple [bootsnip](https://bootsnipp.com/) ou encore [mdbootstrap](https://mdbootstrap.com/snippets/).
 
-:exclamation: Attention toute fois, ces bouts de codes sont souvent "complexe" pour pas grand chose ou qui sont "expirés". Soyez conscient de ce que vous copier/collez dans vos projets et ne le faite pas sans comprendre un minimum. Au mieux inspirez-vous du code trouvé et essayer de le reproduire vous-même.
+:exclamation: Attention toute fois, ces bouts de codes sont souvent "complexe" pour pas grand chose ou sont "expirés". Soyez conscient de ce que vous copiez/collez dans vos projets et ne le faite pas sans comprendre un minimum. Au mieux inspirez-vous du code trouvé et essayer de le reproduire vous-même.
+
+:exclamation: Attention également aux versions de Bootstrap utilisez. si vous copiez du "vieux" code il est possible que le nom de certaines classes aient changés depuis la création du snippet. Alors si ça fonctionne pas, regardez quelle version de Bootstrap est utilisée et voyez si vous pouvez l'adapter à la dernière version (4.5). Evitez d'utilisez la version 5, encore en alpha, pour un vrai projet. Faites en un sur le côté si vous voulez tester les nouvelles fonctionnalitées de Bootstrap!
 
 [:arrow_up:Revenir au top](#bootstrap)
