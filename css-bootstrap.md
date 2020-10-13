@@ -63,6 +63,14 @@ Ajoutez les lignes suivantes à la fin de votre page, juste avant la fermeture d
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 ```
 
+Pour pouvoir utiliser le petit hack de répétition de header vu en [semaine 5 pour landing page](https://github.com/sirius-school/Semaine-05/tree/master/Exercices/landing-page#petit-hack-pour-r%C3%A9p%C3%A9ter-son-headerfooter-sur-plusieurs-pages) il nous faut la version full de JQuerry. Si vous regarder le starter Bootstrap, il utilise la version `slim`. Du coup il suffit d'intégrer le lien vers JQuerry full à la place. Attention à l'ordre dans lequel vous placez vos scripts. On a d'abord besoin de JQuerry avant d'exécuter notre script à nous, sinon ça plante!
+
+```html
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+<script src="script.js"></script> <!-- Notre script qui permet d'afficher le header/footer -->
+<!-- le reste des scripts Bootstrap (i.e. Popper, bootstrap js) -->
+```
+
 ### Méthode complète (fichiers compilés)
 
 Il est également possible de télécharger Bootstrap et d'accéder aux fichiers dont vous avez besoin.
